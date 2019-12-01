@@ -9,18 +9,13 @@ This version is modified based on the need for:
 - Simplified column naming (e.g. no need to identify mobile devices as the baseline)
 
 
-Install
+Setup
 ---------
-### npm
-`npm i flexboxgrid-sass --save`
+- Import the `flexgrid.scss` file into your project.
+- Add config settings below to your global config file.
 
-### bower
-`bower install --save flexboxgrid-sass`
-
-Use
+Config
 ---------
-To modify the Flexbox grid, declare the following variables on your layout .scss
-
 #### Set number of columns
 `$global-grid-columns: 12;`
 
