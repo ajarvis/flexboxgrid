@@ -1,0 +1,121 @@
+$gutter-compensation: $global-gutter-width * 0.5 * -1;
+$half-gutter-width: $global-gutter-width * 0.5;
+
+.#{$prefix}wrapper {
+  box-sizing: border-box;
+  max-width: $global-max-width;
+  margin: 0 auto;
+}
+
+.#{$prefix}container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: $global-outer-margin;
+  padding-left: $global-outer-margin;
+}
+
+.#{$prefix}row {
+  box-sizing: border-box;
+  display: flex;
+  flex: 0 1 auto;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-right: $gutter-compensation;
+  margin-left: $gutter-compensation;
+
+  &.reverse {
+    flex-direction: row-reverse;
+  }
+}
+
+.#{$prefix}col.reverse {
+  flex-direction: column-reverse;
+}
+
+@mixin col-base {
+  box-sizing: border-box;
+  flex-grow: 0;
+  flex-shrink: 0;
+  padding-right: $half-gutter-width;
+  padding-left: $half-gutter-width;
+}
+
+@each $breakpoint in getNestedMap($tokens, "breakpoint") {
+  $name: nth($breakpoint, 1);
+  $sizes: nth($breakpoint, 2);
+  $size: getNestedMap($sizes, "breakpoint_width");
+  $container: getNestedMap($sizes, "container_width");
+
+  @media screen and (min-width: $size) {
+    .#{$prefix}container {
+      width: $container;
+    }
+
+    // If breakpoint is mobile don't use the breakpoint name in the classname
+    @if $name == "mobile" {
+      [class*="#{$prefix}col"] {
+        @include col-base;
+
+        flex-basis: auto;
+      }
+
+      @for $i from 1 through $global-grid-columns {
+        .#{$prefix}col-#{$i} {
+          flex-basis: 100% / $global-grid-columns * $i;
+          max-width: 100% / $global-grid-columns * $i;
+        }
+      }
+
+      @for $i from 0 through $global-grid-columns {
+        .#{$prefix}col-offset-#{$i} {
+          @if $i == 0 {
+            margin-left: 0;
+          }
+
+          @else {
+            margin-left: 100% / $global-grid-columns * $i;
+          }
+        }
+      }
+
+      .#{$prefix}col {
+        flex-grow: 1;
+        flex-basis: 0;
+        max-width: 100%;
+      }
+    }
+
+    @else {
+      [class*="#{$prefix}col-#{$name}"] {
+        @include col-base;
+
+        flex-basis: auto;
+      }
+
+      @for $i from 1 through $global-grid-columns {
+        .#{$prefix}col-#{$name}-#{$i} {
+          flex-basis: 100% / $global-grid-columns * $i;
+          max-width: 100% / $global-grid-columns * $i;
+        }
+      }
+
+      @for $i from 0 through $global-grid-columns {
+        .#{$prefix}col-#{$name}-offset-#{$i} {
+          @if $i == 0 {
+            margin-left: 0;
+          }
+
+          @else {
+            margin-left: 100% / $global-grid-columns * $i;
+          }
+        }
+      }
+
+      .#{$prefix}col-#{$name} {
+        flex-grow: 1;
+        flex-basis: 0;
+        max-width: 100%;
+      }
+    }
+  }
+}

@@ -1,0 +1,18 @@
+/// Get Nested Map
+/// Returns value from a nested map.
+/// ---------
+/// @param $map - accepts a map
+/// @param $keys... - keys arglist - accepts mulitiple comma separated arguments
+/// @example scss
+/// @each $style in map-keys(map-get($tokens, button)) {
+/// .{$style} {
+///   property: #{getNestedMap($tokens, "button", $style, "background-color")};
+/// }
+
+@function getNestedMap($map, $keys...) {
+  @each $key in $keys {
+    $map: map-get($map, $key);
+  }
+
+  @return $map;
+}
