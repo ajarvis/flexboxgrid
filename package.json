@@ -1,6 +1,6 @@
 {
   "name": "scss-flexbox-grid",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Simplified SCSS Flexbox Grid.",
   "scripts": {
     "start": "gulp"
