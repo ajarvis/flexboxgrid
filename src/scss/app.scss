@@ -1,0 +1,40 @@
+@import "mixins";
+
+// Example Tokens
+$tokens: (
+  'breakpoint': (
+    'size': (
+      'mobile': (
+        'breakpoint_width': 0,
+        'fixed_width': 100%
+      ),
+      'tablet': (
+        'breakpoint_width': 768px,
+        'fixed_width': 768px
+      ),
+      'desktop': (
+        'breakpoint_width': 1024px,
+        'fixed_width': 1024px
+      ),
+      'widescreen': (
+        'breakpoint_width': 1280px,
+        'fixed_width': 1280px
+      ),
+      'extrawide': (
+        'breakpoint_width': 1440px,
+        'fixed_width': 1440px
+      )
+    )
+  )
+);
+
+// Grid Config
+$prefix: 'ds-';
+
+$global-grid-columns: 12 !default;
+$global-gutter-width: 1rem !default;
+$global-outer-margin: 1rem !default;
+$global-fixed-width: 1200px !default;
+
+// Import Flexgrid
+@import "flexgrid";

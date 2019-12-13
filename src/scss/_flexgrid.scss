@@ -3,11 +3,11 @@ $half-gutter-width: $global-gutter-width * 0.5;
 
 .#{$prefix}wrapper {
   box-sizing: border-box;
-  max-width: $global-max-width;
   margin: 0 auto;
 }
 
-.#{$prefix}container {
+.#{$prefix}container,
+.#{$prefix}container-fixed {
   margin-right: auto;
   margin-left: auto;
   padding-right: $global-outer-margin;
@@ -44,11 +44,17 @@ $half-gutter-width: $global-gutter-width * 0.5;
   $name: nth($breakpoint, 1);
   $sizes: nth($breakpoint, 2);
   $size: getNestedMap($sizes, "breakpoint_width");
-  $container: getNestedMap($sizes, "container_width");
+  $fixed-width: getNestedMap($sizes, "fixed_width");
+
+  .#{$prefix}container-fixed-#{$name} {
+    max-width: #{$fixed-width};
+    width: calc(100% - (#{$global-outer-margin} * 2));
+  }
 
   @media screen and (min-width: $size) {
-    .#{$prefix}container {
-      width: $container;
+    .#{$prefix}container-fixed {
+      max-width: #{$fixed-width};
+      width: calc(100% - (#{$global-outer-margin} * 2));
     }
 
     // If breakpoint is mobile don't use the breakpoint name in the classname
