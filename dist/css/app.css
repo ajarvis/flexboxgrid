@@ -12,6 +12,11 @@
   padding-left: 1rem;
 }
 
+.ds-container--collapse,
+.ds-container-fixed--collapse {
+  padding: 0;
+}
+
 .ds-row {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -31,11 +36,20 @@
   margin-left: -0.5rem;
 }
 
-.ds-row.reverse {
+.ds-row--reverse {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: reverse;
       -ms-flex-direction: row-reverse;
           flex-direction: row-reverse;
+}
+
+.ds-row--collapse {
+  margin-right: -1rem;
+  margin-left: -1rem;
+}
+
+.ds-col--collapse {
+  padding: 0 !important;
 }
 
 .ds-col.reverse {

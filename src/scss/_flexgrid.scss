@@ -12,6 +12,10 @@ $half-gutter-width: $global-gutter-width * 0.5;
   margin-left: auto;
   padding-right: $global-outer-margin;
   padding-left: $global-outer-margin;
+
+  &--collapse {
+    padding: 0;
+  }
 }
 
 .#{$prefix}row {
@@ -23,8 +27,19 @@ $half-gutter-width: $global-gutter-width * 0.5;
   margin-right: $gutter-compensation;
   margin-left: $gutter-compensation;
 
-  &.reverse {
+  &--reverse {
     flex-direction: row-reverse;
+  }
+
+  &--collapse {
+    margin-right: $gutter-compensation * 2;
+    margin-left: $gutter-compensation * 2;
+  }
+}
+
+.#{$prefix}col {
+  &--collapse {
+    padding: 0 !important;
   }
 }
 
