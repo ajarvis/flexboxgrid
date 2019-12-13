@@ -46,12 +46,16 @@
 }
 
 .ds-container-fixed-mobile {
+  margin-right: auto;
+  margin-left: auto;
   max-width: 100%;
   width: calc(100% - (1rem * 2));
 }
 
 @media screen and (min-width: 0) {
   .ds-container-fixed {
+    margin-right: auto;
+    margin-left: auto;
     max-width: 100%;
     width: calc(100% - (1rem * 2));
   }
@@ -178,12 +182,16 @@
 }
 
 .ds-container-fixed-tablet {
+  margin-right: auto;
+  margin-left: auto;
   max-width: 768px;
   width: calc(100% - (1rem * 2));
 }
 
 @media screen and (min-width: 768px) {
   .ds-container-fixed {
+    margin-right: auto;
+    margin-left: auto;
     max-width: 768px;
     width: calc(100% - (1rem * 2));
   }
@@ -310,12 +318,16 @@
 }
 
 .ds-container-fixed-desktop {
+  margin-right: auto;
+  margin-left: auto;
   max-width: 1024px;
   width: calc(100% - (1rem * 2));
 }
 
 @media screen and (min-width: 1024px) {
   .ds-container-fixed {
+    margin-right: auto;
+    margin-left: auto;
     max-width: 1024px;
     width: calc(100% - (1rem * 2));
   }
@@ -442,12 +454,16 @@
 }
 
 .ds-container-fixed-widescreen {
+  margin-right: auto;
+  margin-left: auto;
   max-width: 1280px;
   width: calc(100% - (1rem * 2));
 }
 
 @media screen and (min-width: 1280px) {
   .ds-container-fixed {
+    margin-right: auto;
+    margin-left: auto;
     max-width: 1280px;
     width: calc(100% - (1rem * 2));
   }
@@ -574,12 +590,16 @@
 }
 
 .ds-container-fixed-extrawide {
+  margin-right: auto;
+  margin-left: auto;
   max-width: 1440px;
   width: calc(100% - (1rem * 2));
 }
 
 @media screen and (min-width: 1440px) {
   .ds-container-fixed {
+    margin-right: auto;
+    margin-left: auto;
     max-width: 1440px;
     width: calc(100% - (1rem * 2));
   }
