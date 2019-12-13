@@ -1,8 +1,32 @@
 {
   "name": "scss-flexbox-grid",
-  "version": "1.0.0",
-  "description": "Simplified SCSS Flexbox Grid.",
+  "version": "1.0.1",
+  "description": "SCSS Flexbox Grid.",
   "scripts": {
     "start": "gulp"
-  }
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "del": "^5.1.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-hb": "^8.0.0",
+    "gulp-notify": "^3.2.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-stylelint": "^11.0.0",
+    "handlebars-utils": "^1.0.6",
+    "node-sass": "^4.13.0",
+    "node-sass-tilde-importer": "^1.0.2",
+    "stylelint": "^12.0.0",
+    "stylelint-config-standard": "^19.0.0",
+    "stylelint-config-standard-scss": "^1.1.0",
+    "stylelint-declaration-use-variable": "^1.7.2",
+    "stylelint-scss": "^3.13.0"
+  },
+  "browserslist": [
+    "last 2 versions"
+  ]
 }

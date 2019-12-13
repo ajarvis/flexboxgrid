@@ -1,4 +1,4 @@
-Simplified SCSS Flexbox Grid
+SCSS Flexbox Grid
 ===========
 This project is an adaptation from the [Flexboxgrid Sass](http://hugeinc.github.io/flexboxgrid-sass) based on [Flexbox Grid](http://flexboxgrid.com/).
 
@@ -7,12 +7,15 @@ This version is modified based on the need for:
 - Removal of non-grid flex helpers (alignment, order, etc)
 - Support for deep nested SCSS maps
 - Simplified column naming (e.g. no need to identify mobile devices as the baseline)
+- Optional row and column padding collapse modifiers
+- Support for both fixed and fluid containers
 
 
 Setup
 ---------
 - Import the `flexgrid.scss` file into your project.
-- Add config settings below to your global config file.
+- Add config settings below to your global config file
+- Set tokens for breakpoint names and widths
 
 Config
 ---------

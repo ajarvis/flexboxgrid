@@ -1,0 +1,7 @@
+{
+  "extends": "stylelint-config-standard-scss",
+  "rules": {
+    "color-hex-length": "long",
+    "function-name-case": ["lower", { "ignoreFunctions": ["#{getNestedMap", "getNestedMap"] }]
+  }
+}
