@@ -55,7 +55,7 @@ $half-gutter-width: $global-gutter-width * 0.5;
   padding-left: $half-gutter-width;
 }
 
-@each $breakpoint in getNestedMap($tokens, "breakpoint", "size") {
+@each $breakpoint in getNestedMap($tokens, "size", "breakpoint") {
   $name: nth($breakpoint, 1);
   $sizes: nth($breakpoint, 2);
   $size: getNestedMap($sizes, "breakpoint_width");
