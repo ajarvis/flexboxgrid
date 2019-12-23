@@ -62,11 +62,15 @@ $half-gutter-width: $global-gutter-width * 0.5;
   .#{$prefix}container-fixed-#{$name} {
     margin-right: auto;
     margin-left: auto;
+
     @if ($name == "mobile") {
       max-width: 100%;
-    } @else {
+    }
+
+    @else {
       max-width: #{$size};
     }
+
     width: calc(100% - (#{$global-outer-margin} * 2));
   }
 
@@ -74,11 +78,15 @@ $half-gutter-width: $global-gutter-width * 0.5;
     .#{$prefix}container-fixed {
       margin-right: auto;
       margin-left: auto;
+
       @if ($name == "mobile") {
         max-width: 100%;
-      } @else {
+      }
+
+      @else {
         max-width: #{$size};
       }
+
       width: calc(100% - (#{$global-outer-margin} * 2));
     }
 
