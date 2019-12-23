@@ -4,26 +4,11 @@
 $tokens: (
   'size': (
     'breakpoint': (
-      'mobile': (
-        'breakpoint_width': 0,
-        'fixed_width': 100%
-      ),
-      'tablet': (
-        'breakpoint_width': 768px,
-        'fixed_width': 768px
-      ),
-      'desktop': (
-        'breakpoint_width': 1024px,
-        'fixed_width': 1024px
-      ),
-      'widescreen': (
-        'breakpoint_width': 1280px,
-        'fixed_width': 1280px
-      ),
-      'extrawide': (
-        'breakpoint_width': 1440px,
-        'fixed_width': 1440px
-      )
+      'mobile': 0,
+      'tablet': 768px,
+      'desktop': 1024px,
+      'widescreen': 1280px,
+      'extrawide': 1440px
     )
   )
 );
